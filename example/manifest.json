@@ -1,0 +1,17 @@
+{
+  "short_name": "Joahquin Test App",
+  "name": "Joahquin Test App",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "48x48 72x72 96x96 128x128 144x144 168x168 192x192 256x256 512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "orientation": "portrait",
+  "background_color": "#ffffff"
+}

@@ -1,0 +1,9 @@
+{
+  "name": "appsw",
+  "version": "1.0.2",
+  "description": "Application service worker generator",
+  "main": "index.js",
+  "bin": "index.js",
+  "author": "neilveil",
+  "repository": "neilveil/appsw"
+}

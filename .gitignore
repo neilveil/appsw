@@ -1,0 +1,6 @@
+apphash.json
+build
+example/service-worker.js
+example/service-worker-handler.js
+node_modules
+tmp
