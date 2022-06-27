@@ -1,6 +1,6 @@
 {
   "name": "appsw",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Application service worker generator",
   "main": "index.js",
   "bin": "index.js",

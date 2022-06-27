@@ -87,9 +87,9 @@ const main = root => {
   if (cli) console.log('Application service worker generated!')
 }
 
-module.exports = main
-
 if (process.argv.includes('--appsw-root')) {
   cli = true
   main(process.argv[process.argv.indexOf('--appsw-root') + 1])
 }
+
+module.exports.default = main

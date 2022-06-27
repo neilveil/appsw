@@ -7,6 +7,8 @@ test-build:
 test-module:
 	@node src/test.js
 
+test: test-cli test-build test-module
+
 .PHONY: build
 build:
 	@rm -rf build
