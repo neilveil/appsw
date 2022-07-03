@@ -2,8 +2,6 @@ const fs = require('fs')
 const path = require('path')
 const crypto = require('crypto')
 
-var cli = false
-
 const removeFileIfExists = filePath => filePath && fs.existsSync(filePath) && fs.rmSync(filePath)
 
 const dirinfo = dirPath => {
@@ -48,7 +46,7 @@ const dirinfo = dirPath => {
   return { files, size, hash, root: dirPath }
 }
 
-const main = root => {
+const main = (root = 'build', cli = false) => {
   root = path.resolve(root)
 
   if (cli) console.log('ROOT: ' + root)
@@ -85,11 +83,6 @@ const main = root => {
   }
 
   if (cli) console.log('Application service worker generated!')
-}
-
-if (process.argv.includes('--appsw-root')) {
-  cli = true
-  main(process.argv[process.argv.indexOf('--appsw-root') + 1])
 }
 
 module.exports.default = main

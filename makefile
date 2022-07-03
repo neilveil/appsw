@@ -1,20 +1,17 @@
-test-cli:
-	@node src/index.js --appsw-root example
-
-test-build:
-	@node build/index.js --appsw-root example
-
-test-module:
-	@node src/test.js
-
-test: test-cli test-build test-module
-
 .PHONY: build
 build:
 	@rm -rf build
 	@mkdir build
 	@node src/build.js
 	@cp package.public.json build/package.json
+
+test-cli:
+	@node build/bin.js --appsw-root example
+
+test-module:
+	@node src/test.js
+
+test: build test-cli test-module
 
 publish:
 	@cd build && npm publish

@@ -4,7 +4,8 @@ const obfuscator = require('webpack-obfuscator')
 webpack(
   {
     entry: {
-      index: __dirname + '/index.js'
+      main: __dirname + '/main.js',
+      bin: __dirname + '/bin.js'
     },
     output: {
       filename: '[name].js',

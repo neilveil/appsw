@@ -10,8 +10,9 @@ npm install appsw
 
 ### CLI
 
-```
-npx appsw --appsw-root build
+```sh
+npx appsw
+npx appsw --appsw-root ./my-build"
 ```
 
 ### Module
@@ -19,18 +20,22 @@ npx appsw --appsw-root build
 ```js
 const appsw = require('appsw')
 
-appsw('build')
+appsw()
+appsw('./my-build')
 ```
 
-### PackageJSON
+### Package JSON
 
 ```json
 {
   "scripts": {
-    "test-cli": "appsw --appsw-root build"
+    "test-cli": "appsw",
+    "test-cli": "appsw --appsw-root ./my-build"
   }
 }
 ```
+
+> Default value of "--appsw-root" is "build".
 
 ## Integration
 
