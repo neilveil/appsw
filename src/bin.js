@@ -1,5 +1,7 @@
 const main = require('./main').default
 
-const root = process.argv[process.argv.indexOf('--appsw-root') + 1]
+const appswRootArgIndex = process.argv.indexOf('--appsw-root')
+
+const root = appswRootArgIndex > -1 ? process.argv[appswRootArgIndex + 1] : undefined
 
 main(root, true)
