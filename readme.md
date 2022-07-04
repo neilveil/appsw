@@ -56,3 +56,5 @@ appsw('./my-build')
 ### Overwrite default service worker
 
 `service-worker-overwrite.js` overwrites content in default service worker.
+
+> Avoid using "Cache-Control" headers to cache the latest files on apphash update.
