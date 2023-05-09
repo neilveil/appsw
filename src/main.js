@@ -67,9 +67,11 @@ const main = (root = 'build', cli = false) => {
   removeFileIfExists(paths.sw)
   removeFileIfExists(paths.swHandler)
 
-  var { hash, files } = dirinfo(root)
+  // var { hash, files } = dirinfo(root)
+  var { hash } = dirinfo(root)
 
-  fs.writeFileSync(paths.apphash, JSON.stringify({ hash, files }))
+  // fs.writeFileSync(paths.apphash, JSON.stringify({ hash, files }))
+  fs.writeFileSync(paths.apphash, JSON.stringify({ hash }))
 
   fs.copyFileSync(__dirname + '/service-worker.js', paths.sw)
   fs.copyFileSync(__dirname + '/service-worker-handler.js', paths.swHandler)

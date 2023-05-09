@@ -8,12 +8,14 @@ self.addEventListener('install', event =>
       // Drop existing cache
       await caches.keys().then(keys => Promise.all(keys.map(key => caches.delete(key))))
 
-      var precacheFiles
-      try {
-        precacheFiles = JSON.parse(await (await fetch('/apphash.json?' + Date.now())).text()).files
-      } catch (error) {
-        reject(error)
-      }
+      // var precacheFiles
+      // try {
+      //   precacheFiles = JSON.parse(await (await fetch('/apphash.json?' + Date.now())).text()).files
+      // } catch (error) {
+      //   reject(error)
+      // }
+
+      const precacheFiles = ['/offline.html']
 
       // Cache all files
       await caches.open('STATIC').then(async cache => await cache.addAll(precacheFiles))
