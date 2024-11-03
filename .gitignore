@@ -1,6 +1,6 @@
 apphash.json
 build
-example/service-worker.js
 example/service-worker-handler.js
+example/service-worker.js
 node_modules
 tmp
