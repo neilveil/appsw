@@ -26,8 +26,8 @@ export default ({ root = 'build', type = 'runtime', uncompressed = false, debug 
 
   const paths = {
     src: {
-      sw: path.resolve('./scripts/service-worker.js'),
-      swHandler: path.resolve('./scripts/service-worker-handler.js')
+      sw: path.resolve(__dirname, '../scripts/service-worker.js'),
+      swHandler: path.resolve(__dirname, '../scripts/service-worker-handler.js')
     },
     dest: {
       apphash: path.resolve(root, 'apphash.json'),

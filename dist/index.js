@@ -21,8 +21,8 @@ exports.default = ({ root = 'build', type = 'runtime', uncompressed = false, deb
         throw new Error(`"${root}" directory not found!`);
     const paths = {
         src: {
-            sw: path_1.default.resolve('./scripts/service-worker.js'),
-            swHandler: path_1.default.resolve('./scripts/service-worker-handler.js')
+            sw: path_1.default.resolve(__dirname, '../scripts/service-worker.js'),
+            swHandler: path_1.default.resolve(__dirname, '../scripts/service-worker-handler.js')
         },
         dest: {
             apphash: path_1.default.resolve(root, 'apphash.json'),
